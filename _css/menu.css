@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+.label-nav, #check,.menu-movel{
+  display: none;
+}
+a{
+  text-decoration: none;
+  
+}
+
+nav{
+  width: 100%;
+  height: 52px;;
+  background-color: steelblue;
+}
+.nav-wrap{  
+  height: auto;
+  margin: auto;
+}
+
+.container{
+  width: 70%;
+  margin: auto;
+}
+
+/*FLEX-BOX*/
+.menu-flex{  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+    
+}
+ul.menu{
+  list-style-type: none;
+  position: relative;
+}
+ul.menu li{
+  float: left;
+  padding: 0 10px;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+}
+ul.menu li:hover{
+  background-color: rgba(0,0,0, 0.1);
+}
+ul.menu li a{
+  color: 
+    #fff;
+}
+
+/*MENU MÓVEL*/
+
+
+.label-nav{
+  font-size: 30px;
+  padding-left: 10px;
+  line-height: 50px;
+  color: #fff;
+  font-weight: bold;
+}
+ul.menu-movel{
+  position: absolute;
+  width: 100%;
+  background-color: steelblue;
+  list-style-type: none;
+  transition: 1.2s;
+  top: -500px;
+}
+ 
+ul.menu-movel li{
+  width: 100%;
+  height: 50px;
+  background-color: steelblue;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+#check:checked ~ ul.menu-movel{
+  margin-top: 550px;
+  transition: 1.2s;
+}
+ul.menu-movel li a{
+  color: #fff;
+}
+
+
+/*DESKTOP*/
+@media only screen and (max-width:768px){
+  ul.menu{
+    display: none;
+        
+  }
+  
+}
+/*TABLET*/
+@media only screen and (max-width:767px){
+  ul.menu-movel, .label-nav{
+    display: block;
+  }
+  .menu-footer{
+    display: none;
+  }
+  .container{
+    width: 90%;
+    height: auto;
+  }
+  .flex-item{
+    width: 48%
+  }
+  
+  
+  
+}
+
+/*CELULAR*/
+@media only screen and (max-width:500px){
+  ul.menu-movel, .label-nav{
+    display: block;
+  }
+  .menu-footer{
+    display: none;
+  }
+  .container{
+    width: 95%;
+    height: auto;
+  }
+  .flex-item{
+    width: 100%;
+    flex-direction: column;    
+  }
+  .flex-container-historias{
+    display: none;
+  }
+  .flex-footer{
+    flex-direction: column;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+

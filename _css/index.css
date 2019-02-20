@@ -1,0 +1,305 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family: arial;
+}
+.img-responsivo{
+  max-width: 100%;
+  height: auto;
+}
+
+/*MENU*/
+
+.label-nav, #check,.menu-movel{
+  display: none;
+}
+a{
+  text-decoration: none;
+  
+}
+
+nav{
+  width: 100%;
+  height: 50px;
+  background-color: steelblue;
+}
+.nav-wrap{  
+  height: auto;
+  margin: auto;
+}
+
+.container{
+  width: 75%;
+  margin: auto;
+}
+
+/*FLEX-BOX*/
+.menu-flex{  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+    
+}
+ul.menu{
+  list-style-type: none;
+  position: relative;
+}
+ul.menu li{
+  float: left;
+  padding: 0 10px;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+}
+ul.menu li:hover{
+  background-color: rgba(0,0,0, 0.1);
+}
+ul.menu li a{
+  color: 
+    #fff;
+}
+
+/*MENU MÓVEL*/
+
+
+.label-nav{
+  font-size: 30px;
+  padding-left: 10px;
+  line-height: 50px;
+  color: #fff;
+  font-weight: bold;
+}
+ul.menu-movel{
+  position: absolute;
+  width: 100%;
+  background-color: steelblue;
+  list-style-type: none;
+  transition: 1.2s;
+  top: -500px;
+}
+ 
+ul.menu-movel li{
+  width: 100%;
+  height: 50px;
+  background-color: steelblue;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+#check:checked ~ ul.menu-movel{
+  margin-top: 550px;
+  transition: 1.2s;
+}
+ul.menu-movel li a{
+  color: #fff;
+}
+
+/*FIM MENU*/
+.banner{
+  max-width: 1400px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+/*ARTIGOS EM DESTAQUES*/
+
+.row{
+  width: 100%;
+  height: auto;
+}
+/*FORMATAÇÃO DE TITULO E TEXTO*/
+.titulo{
+  font-size: 1.6em;
+  color: steelblue;
+}
+.txt-center{
+  text-align: center;
+}
+.txt-justify{
+  text-align: justify;
+}
+.top{
+  margin-top: 30px;
+}
+.bottom{
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+
+/*ARTILCLE  FLEX-CONTAINER*/
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ 
+}
+.flex-item{
+  background-color: seashell;
+  width: 49%;
+  height: auto;
+  cursor: pointer;
+  transition: .4s;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top:20px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.flex-item:hover{
+  opacity: .5;
+  transition: .5s;
+  transform: scale(1.05);
+}
+/*HISTÓRIAS*/
+.flex-container-historias{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-bottom: 100px ;
+}
+.flex-item-historias{
+  margin-left: 1px;
+  width: 300px;;
+  height: 250px;
+  line-height: 180px;
+  text-align: center;
+  transition: .5s;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+}
+.flex-item-historias:hover{
+  transform: scale(0.9);
+  transition: .5s;
+}
+hr{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+figure{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+figure{
+  position: relative;
+}
+figure:hover figcaption.caption-promo{
+  background-color: rgba(0,0,0, .6);
+  transition: .6;
+}
+figcaption.caption-promo{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0,0,0, .0);
+  transition: .5s;
+  font-size: 1.3em
+}
+
+/*FLEX-FOOTER*/
+footer{
+  width: 100%;
+  height: auto;
+  background-color: steelblue;
+  padding-bottom: 20px;
+}
+
+.flex-footer{
+  height: auto;
+  color: #fff;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu-footer{
+  list-style-type: none;
+}
+.menu-footer li a{
+  color:#fff;
+  font-weight: bold;
+}
+.menu-footer li a:hover{
+  text-decoration: underline;
+}
+
+/*DESKTOP*/
+@media only screen and (max-width:768px){
+  ul.menu{
+    display: none;
+        
+  }
+  
+}
+/*TABLET*/
+@media only screen and (max-width:767px){
+  ul.menu-movel, .label-nav{
+    display: block;
+  }
+  .menu-footer{
+    display: none;
+  }
+  .container{
+    width: 90%;
+    height: auto;
+  }
+  .flex-item{
+    width: 48%
+  }
+  
+   .flex-container-historias{
+    display: none;
+  }
+  
+}
+
+/*CELULAR*/
+@media only screen and (max-width:500px){
+  ul.menu-movel, .label-nav{
+    display: block;
+  }
+  .menu-footer{
+    display: none;
+  }
+  .container{
+    width: 95%;
+    height: auto;
+  }
+  .flex-item{
+    width: 100%;
+    flex-direction: column;    
+  }
+  .flex-container-historias{
+    display: none;
+  }
+  .flex-footer{
+    flex-direction: column;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
